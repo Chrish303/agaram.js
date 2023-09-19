@@ -1,0 +1,22 @@
+fruits=["apple","orange","grapes"]
+print(fruits[0])
+fruits.append("pinapple")
+fruits.insert(1,"mango")
+print(fruits[1])
+#rows
+row1=['anish',"ajay","sam"]
+row2=["kumar","vinish",'karthick']
+two_rows=row1+row2
+print(two_rows)
+print(row1[0],row2[1])
+#dictionary:details
+details={"name":"karka",
+         "place":"putheri"}
+details['phone']=345676768
+details['place']="vadasery"
+#update panrathu
+print(details)
+details={"name":"karka",
+         "place":"putheri"}
+details.update({'email':'karka@gmail.com','year':2023})
+print(details)

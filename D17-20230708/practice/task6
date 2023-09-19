@@ -1,0 +1,13 @@
+number=[1,4,5,7,6,8,2,3,3]
+# max1=max(number)
+# min1=min(number)
+# output=max1-min1
+# print(output)
+mini=number[0]
+maxi=0
+for num in number:
+    if num<=mini:
+        mini=num
+    if num>=maxi:
+        maxi=num
+print(maxi-mini)

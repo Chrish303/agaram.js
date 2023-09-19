@@ -1,0 +1,50 @@
+#listexample
+friends_names=["ashok","ajay","chrish","anish","ivanjalie","asmitha","arun","divya","abisha"]
+print(friends_names[2])
+print(friends_names[5])
+print(friends_names[7])
+#dictionary examples
+my_details={"name":"chrish",
+             "place":"vadasery"}
+print(my_details["name"])
+print(my_details["place"])
+#list of dictionary
+friends_details=[
+                  {"name":"ajay",
+                  "place":"kanyakumari",
+                  "hobbies":["movies","travells","shuttle"]
+                  },
+                 {"name":"ashok",
+                  "place":"ozaravillai",
+                  "hobbies":["movies","roaming","games"]
+                  },
+                 {"name":"anish",
+                  "place":"ammmandivillai",
+                  "hobbies":["tution","movies","volleyball"]
+                  },
+                 {
+                    "name":"ivanjaline",
+                  "place":"krishnankoil",
+                  "hobbies":["drawing","craftwork","wateringplant"]
+                  },
+                 {"name":"amirtha",
+                  "place":"parakai",
+                  "hobbies":["drwing","wateringplanet","browsing"]
+                  },
+                 {
+                     "name":"arun",
+                  "place":"sathanvillai",
+                  "hobbies":["gym","running","kabadi"]
+                  },
+                 {"name":"divya",
+                  "place":"kottar",
+                  "hobbies":["reading","internet","wateringplant"]
+                  },
+                 {"name":"abisha",
+                  "place":"ramanputhoor",
+                  "hobbies":["wareingplant","reading","arrie"]
+                  }
+]
+print(friends_details[1]["place"])
+print(friends_details[5]["hobbies"])
+print(friends_names[2])

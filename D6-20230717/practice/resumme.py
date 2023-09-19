@@ -1,0 +1,42 @@
+my_resume={"objectives":"""Secure a responsible career opportunity to fully utilize my training and skills while making a
+            significant contribution to the success of the company""",
+    "name":"christhurajan",
+    "E-mail":"chrishbro71@gmail.com",
+    "mobile-no":"+91-9360588419",
+    "soft_skil":["excel","ms word"],
+    "hard_skil":"writting",
+    "personal_details":{"fathres_name":"p.george",
+                         "occupation":"cooli",
+                         "language known":"tamil",
+                         "genter":"male",
+                         "matterial_status":"single",
+                         "date_of_birth":"15/05/2002",
+                         "hobbies":["cricet","foooball","reading"]},
+                         "Address":{"Door_no":"2/357",
+                                    "Street":"thiruvalluvar street",
+                                    "City":"nagerkoil",
+                                    "District":"Kanyakumari",
+                                    "State":"tamilnadu",
+                                    "pincode":629001},
+                         "Qualification":[{"level":"SSLC",
+                                           "Institute name":"GHSS",
+                                           "Yearofpassig":2018,
+                                           "Markpresentge":"80%",
+                                           "Place":"vadasery"},
+                                           {"level":"HSC",
+                                           "Institute name":"GHSS",
+                                           "Yearofpassig":2019,
+                                           "Markpresentge":"70%",
+                                           "Place":"vadasery"},
+                                           {"level":"Degree",
+                                           "Institute name":"Govt.Arts and Science College",
+                                           "Yearofpassig":2018,
+                                           "Markpresentge":"80%",
+                                           "Place":"konam"},],
+                                           "Declretion":"""I hereby declare that the above particulars of facts and information stated are true, 
+                                           correct and complete to the best of my belief and knowledge."""
+}
+print(my_resume)
+print(my_resume[4])
+
+                            

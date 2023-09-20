@@ -9,6 +9,13 @@
         #reg {
             display: none;
         }
+
+        /* #one {
+            display: none;
+        } */
+        #table{
+            display: none;
+        }
     </style>
     <script src="login.js" text="text/javascript"></script>
 </head>
@@ -18,37 +25,51 @@
     <div id="home" align="center">
         <p id="name">WELLCOME TO !</p>
         <input type="button" value="logout" onclick="logout()"></input>
-        <table id="1" border="2px">
-            <tr>
-                <th>Name</th>
-                <th>email</th>
-                <th>update</th>
-                <th>delete</th>
-            </tr>
-            <tr>
-                <td>a</td>
-                <td>b</td>
-                <td><img src="/home/christu-rajan/Downloads/pencil_1828911 (copy).png" alt="icon" style="height: 20px;width: 20px;"></img></td>
-                <td><img src="/home/christu-rajan/Downloads/bin_484611.png" alt="icon" style="height: 20px;width: 20px;"></img></td>
-            </tr>
-            </tr>
-            <tr>
-                <td>a</td>
-                <td>b</td>
-                <td></td>
-                <td></td>
-            </tr>
-            </tr>
-            <tr>
-                <td>a</td>
-                <td>b</td>
-                <td></td>
-                <td></td>
-            </tr>
-
-        </table>
-
+        <input type="button" value="data" onclick="option()"></input>
     </div>
+    <div id="one" align="center">
+        <table id="table" border="1px" align="center">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>email</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+            </thead>
+            <tbody id="list_body" >
+
+                <!-- <tr>
+                    <td>a</td>
+                    <td>b</td>
+                    <td><img src="/home/christu-rajan/Downloads/pencil_1828911 (copy).png" alt="icon"
+                            style="height: 20px;width: 20px;"></img></td>
+                    <td><img src="/home/christu-rajan/Downloads/bin_484611.png" alt="icon"
+                            style="height: 20px;width: 20px;"></img></td>
+                </tr>
+            </tbody>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>b</td>
+                <td><img src="/home/christu-rajan/Downloads/pencil_1828911 (copy).png" alt="icon"
+                        style="height: 20px;width: 20px;"></img></td>
+                <td><img src="/home/christu-rajan/Downloads/bin_484611.png" alt="icon"
+                        style="height: 20px;width: 20px;"></img></td>
+            </tr>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>b</td>
+                <td><img src="/home/christu-rajan/Downloads/pencil_1828911 (copy).png" alt="icon"
+                        style="height: 20px;width: 20px;"></img></td>
+                <td><img src="/home/christu-rajan/Downloads/bin_484611.png" alt="icon"
+                        style="height: 20px;width: 20px;"></img></td>
+            </tr> -->
+        </tbody>
+        </table>
+    </div>
+
 
     <div id="page" align="center">
         <form>

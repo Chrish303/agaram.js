@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="log.css">
+</head>
+
+<body>
+    <div id="top">
+        <h1 style="display: inline-block;" id="intro">Welcome To !</h1><br>
+        <input type="button" value="Logout" onclick="logout()">
+    </div>
+    <div id="login">
+        <h1>Login Page</h1>
+        <form action="">
+            <label>Email : </label>
+            <input type="email" placeholder="E-Mail ID" id="email"><br><br>
+            <label>Password : </label>
+            <input type="password" placeholder="Password" id="password"><br><br>
+            <input type="button" value="Login" onclick="loginCheck()">
+            <input type="button" value="Registeration" onclick="reg()">
+        </form>
+    </div>
+    <div id="regis">
+        <form>
+            <h1>Registeration</h1>
+            <label>Name : </label>
+            <input type="text" placeholder="Username" id="r_user"><br><br>
+            <label>E-Mail</label>
+            <input type="email" placeholder="Enter Your Mail ID" id="r_mail"><br><br>
+            <label>Password : </label>
+            <input type="password" placeholder="Enter Your Password" id="r_password"><br><br>
+            <input type="button" value="Register" onclick="register()">
+        </form>
+    </div>
+    <script src="log.js" text="text/javascript"></script>
+    <script>loging()</script>
+</body>
+
+</html>

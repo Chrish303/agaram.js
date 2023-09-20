@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <style>
+        #home {
+            display: none;
+        }
+
+        #reg {
+            display: none;
+        }
+    </style>
+    <script src="login.js" text="text/javascript"></script>
+</head>
+
+<body>
+
+    <div id="home" align="center">
+        <p id="name">WELLCOME TO !</p>
+        <input type="button" value="logout" onclick="logout()"></input>
+        <table id="1" border="2px">
+            <tr>
+                <th>Name</th>
+                <th>email</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>b</td>
+                <td><img src="/home/christu-rajan/Downloads/pencil_1828911 (copy).png" alt="icon" style="height: 20px;width: 20px;"></img></td>
+                <td><img src="/home/christu-rajan/Downloads/bin_484611.png" alt="icon" style="height: 20px;width: 20px;"></img></td>
+            </tr>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>b</td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>b</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <div id="page" align="center">
+        <form>
+            <label>Email:</label>
+            <input id="get" type="email" placeholder="enter your email" required name="emailid"></input><br><br>
+            <lable>Password:</lable>
+            <input id="pass" type="passsword" placeholder="enter your password" requiredname="password"></input><br><br>
+            <input type="button" value="login" onclick="logincheck()"></input>
+            <input type="button" value="register" onclick="sigin()"></input>
+        </form>
+    </div>
+    <div id="reg" align="center">
+        <form>
+            <h1>Register here</h1>
+            <lable>Name:</lable>
+            <input id="bl" type="name" placeholder="enter your name" /><br><br>
+            <lable>email:</lable>
+            <input id="ul" type="email" placeholder="enter your email" required name="emailid"></input><br><br>
+            <lable>Password:</lable>
+            <input id="ol" type="passsword" placeholder="enter your password" requiredname="password"></input><br><br>
+            <input type="button" value="register" onclick="regis()"></input>
+        </form>
+    </div>
+
+</body>
+<script>logged()</script>
+
+</html>

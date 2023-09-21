@@ -47,6 +47,7 @@ function logout() {
     document.getElementById("page").style.display = "block";
     document.getElementById("home").style.display = "none";
     document.getElementById("table").style.display = "none"
+    alert("leave ")
 }
 function logged() {
 
@@ -108,7 +109,7 @@ function option() {
         htmldata = htmldata + `<tr>
                                 <td>${n1}</td>
                                 <td>${n2}</td>
-                                <td><button>Edit</button></td>
+                                <td><button onclick="adata()">Edit</button></td>
                                 <td><button onclick="Delete('${n2}')">Delete</button></td>
                                 </tr>`
                                
@@ -116,6 +117,27 @@ function option() {
     }
     document.getElementById("list_body").innerHTML = htmldata;
 }
+function adata(){
+    document.getElementById("home").style.display="none"
+    document.getElementById("update").style.display="block"
+    document.getElementById("table").style.display = "none"
+}
+function change(){
+    z=window.n2
+    let up_name=document.getElementById("m1").value
+    let up_email=document.getElementById("m2").value
+    let up_pass=document.getElementById("m3").value
+    det=JSON.parse(localStorage.getItem("user"))
+    for(var i=0; i<det.length; i++){
+        if(det[i].email==z){
+            det[i].name==up_name,
+            det[i].email==up_email,
+            det[i].password==up_pass
+        }
+}
+localStorage.setItem("user",JSON.stringify(det))
+}
+
 function Delete(b){
     // alert("s")
     let details=JSON.parse(localStorage.getItem("user"))

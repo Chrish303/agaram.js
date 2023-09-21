@@ -10,10 +10,22 @@
             display: none;
         }
 
-        /* #one {
+        #one {
+            border: 0;
+            padding: 0;
+        }
+        #table {
             display: none;
-        } */
-        #table{
+            padding: 0px;
+            margin: 2px;
+            margin-right: 900px;
+            
+
+        }
+        #edi{
+            display: none;
+        }
+        #update{
             display: none;
         }
     </style>
@@ -23,12 +35,12 @@
 <body>
 
     <div id="home" align="center">
-        <p id="name">WELLCOME TO !</p>
+        <h1 id="name">WELLCOME TO !</h1>
         <input type="button" value="logout" onclick="logout()"></input>
         <input type="button" value="data" onclick="option()"></input>
     </div>
     <div id="one" align="center">
-        <table id="table" border="1px" align="center">
+        <table id="table" border="1px" align="center" >
             <thead>
                 <tr>
                     <th>Name</th>
@@ -37,7 +49,7 @@
                     <th>delete</th>
                 </tr>
             </thead>
-            <tbody id="list_body" >
+            <tbody id="list_body">
 
                 <!-- <tr>
                     <td>a</td>
@@ -66,13 +78,14 @@
                 <td><img src="/home/christu-rajan/Downloads/bin_484611.png" alt="icon"
                         style="height: 20px;width: 20px;"></img></td>
             </tr> -->
-        </tbody>
+            </tbody>
         </table>
     </div>
 
 
     <div id="page" align="center">
         <form>
+            <h1>Login here</h1>
             <label>Email:</label>
             <input id="get" type="email" placeholder="enter your email" required name="emailid"></input><br><br>
             <lable>Password:</lable>
@@ -83,6 +96,7 @@
     </div>
     <div id="reg" align="center">
         <form>
+            
             <h1>Register here</h1>
             <lable>Name:</lable>
             <input id="bl" type="name" placeholder="enter your name" /><br><br>
@@ -91,7 +105,21 @@
             <lable>Password:</lable>
             <input id="ol" type="passsword" placeholder="enter your password" requiredname="password"></input><br><br>
             <input type="button" value="register" onclick="regis()"></input>
+        </div>
+        <div id="update">
         </form>
+            <!-- <input id="edi" type="button" value="done" onclick="edit()"></input> -->
+            <form>
+            <h1>update here</h1>
+            <lable>Name:</lable>
+            <input id="m1" type="name" placeholder="enter your name" /><br><br>
+            <lable>email:</lable>
+            <input id="m2" type="email" placeholder="enter your email" required name="emailid"></input><br><br>
+            <lable>Password:</lable>
+            <input id="m3" type="passsword" placeholder="enter your password" requiredname="password"></input><br><br>
+            <input  id="up" type="button" value="update" onclick="change()" ></input>
+        </form>
+       
     </div>
 
 </body>

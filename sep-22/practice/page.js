@@ -55,6 +55,7 @@ function register() {
 }
 function logout() {
     window.location = "login.html"
+    localStorage.removeItem('logged')
 }
 function logged() {
 

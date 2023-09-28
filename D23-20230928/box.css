@@ -1,0 +1,47 @@
+*{
+    border: 0px;
+    padding: 0px;
+}
+.one{
+   display: inline-block;
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+    border: 2px solid red;
+    margin: 10px;
+   vertical-align: top;
+}
+#two{
+    display: inline-block;
+     width: 500px;
+    height: 500px;
+    background-color: aqua;
+    border: 2px solid red;
+    margin: 10px;
+    
+   
+}
+body{
+    background-color: rgba(216, 219, 32, 0.842);
+    position: relative;
+   
+}
+p{
+    margin:20px;
+    background-color: darkolivegreen;
+}
+ul{
+    border: 2px solid darkgreen;
+    margin: 2px;
+    position: absolute;
+  top: 0px;
+  right: 0px;
+}
+li{
+    display: inline-block;
+    border: 2px solid black;
+    margin: 5px;
+    padding: 5px;
+    background-color: blanchedalmond;
+  
+}

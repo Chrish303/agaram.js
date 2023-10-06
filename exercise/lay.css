@@ -1,0 +1,53 @@
+*{
+    border: 0;
+    padding: 0;
+}
+#con{
+    background-color: rgb(69, 66, 66);
+    width: 100%;
+    height: 10%;
+    position: relative;
+    display: flex;
+}
+/* #logo{
+
+} */
+#search{
+    position: absolute;
+    top: 15px;
+    right: 800px;
+    justify-content: center;
+  
+}
+#one{
+    width: 390px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 50px;
+    position: relative;
+}
+#list{
+    display:inline-block;
+}
+#sec{
+    display: inline-block;
+    position: absolute;
+    top: 7px;
+    right: 60px;
+}
+li{
+    display: inline-block;
+    padding: 15px;
+    
+}
+#bar{
+position: absolute;
+top: 0;
+right: 0;
+}
+.dropdown{
+    position: absolute;
+    top: 16px;
+    left: 550;
+    
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="/javascript/day4/css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="register">
+            <h1>Register</h1>
+                <form action="">
+                    <label for="">Name </label><input type="text" id="name"><br>
+                    <label for="">Email </label><input type="email" id="email"><br>
+                    <label for="">password </label><input type="password" id="password"><br>
+                    <!-- <label for="">confirm password </label><input type="password" id="c_password"><br><br> -->
+                    <button type="button" id="button" onclick="register()">register</button>
+                </form>
+        </div>
+    </div>
+</body>
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script> -->
+
+<script src="fire.js"></script>
+</html>

@@ -1,0 +1,22 @@
+*{
+    border: 0px;
+    padding: 0px;
+}
+/* div{
+    background-color: rgb(198, 96, 230);
+} */
+ul{
+ display: flex;
+ flex-direction:row;
+ flex-wrap:wrap-reverse;
+ justify-content: center;
+ gap: 100px 50px;
+}
+li{
+    display: inline-block;
+    border: 2px solid black;
+    width: 20%;
+    height: 150px;
+
+}
+

@@ -29,14 +29,21 @@ ul{
     margin-right: 8px;
 }
 #tittle{
-    width: 20%;
-    margin: 0 auto;
+    width: 10%;
+    height: 200px;
+    margin:  auto;
+    border: 2px solid green;
+    /* min-width: 20%; */
+    overflow: auto;
     
 }
 #img{
     width:100%;
     display: inline-block;
     position: relative;
+    z-index: 0;
+    opacity: 0.8;
+    
     
 }
 #acc{
@@ -45,6 +52,7 @@ ul{
     top: 201px;
     right: 482;
     border: 2px solid greenyellow;
-    border-style: calc();
+    border-style: calc(100% - 200px);
     padding: 10px;
+    z-index:0;
 }

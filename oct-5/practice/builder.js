@@ -50,7 +50,7 @@ function del(f,g){
 }
 function add(edu){
     edu_tem[edu.name]=edu.value
-    console.log(edu_tem)
+    // console.log(edu_tem)
 }
 function up(d){
     if(!resume_details[d]){

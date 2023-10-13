@@ -47,36 +47,36 @@ function finish(data) {
         resume_details[data] = []
     }
     resume_details[data].push(education_temp)
-    dis(resume_details[data],data)
+    dis(resume_details[data], data)
     education_temp = {}
     let keys = Object.keys(education_temp)
     for (i = 0; i < keys.length; i++) {
-        document.getElementById(keys[i]).value = ""
+        let van = keys[i]
+        document.getElementById(van).value = ""
     }
     display()
 }
-function dis(tata,data){
-    // console.log(tata)
-    let  tdd=""
-    for(i=0;i<tata.length;i++){
-        let tddata=""
-        for(const key in tata[i]){
-            tddata=tddata+`<td>${tata[i][key]}</td>`
+function dis(tata, data) {
+    let tdd = ""
+    for (i = 0; i < tata.length; i++) {
+        let tddata = ""
+        for (const key in tata[i]) {
+            tddata = tddata + `<td>${tata[i][key]}</td>`
         }
-            tdd=tdd+`<tr>`+tddata+`<td> <button type="button"  onclick="rem('${i}','${data}')">&times;</button></td>`+`</tr>`
+        tdd = tdd + `<tr>` + tddata + `<td> <button type="button"  onclick="rem('${i}','${data}')">&times;</button></td>` + `</tr>`
     }
-    document.getElementById(data).innerHTML=tdd
+    document.getElementById(data).innerHTML = tdd
 }
-function rem(ki,ko){
-    let kili=resume_details[ko]
-    let weed=[]
-    for(i=0;i<kili.length;i++){
-        if(i!=ki){
+function rem(ki, ko) {
+    let kili = resume_details[ko]
+    let weed = []
+    for (i = 0; i < kili.length; i++) {
+        if (i != ki) {
             weed.push(kili[i])
         }
     }
-    resume_details[ko]=weed
-    dis(resume_details[ko],ko)
+    resume_details[ko] = weed
+    dis(resume_details[ko], ko)
     display()
 }
 function display() {
@@ -92,16 +92,17 @@ function create() {
         data: {
             request: "create_resume",
             user: "chrish",
-            resume: resume_details
+            resume: { resume_details }
         },
         success: function (response) {
             console.log("response", response)
+            window.location = "build.html"
         },
         error: function (fail) {
             console.log("fail", fail)
         }
     });
-    window.location = "build.html"
+
 }
 function get() {
     $.ajax({
@@ -137,6 +138,7 @@ function remove(z) {
 
     })
     get()
+    show()
 }
 function table() {
     window.location = "build.html"
@@ -152,54 +154,52 @@ function showresue(id) {
             id
         },
         success: function (response) {
-            // console.log("response", response)
+            console.log("response", response)
             let res = JSON.parse(response)
-            // console.log("ress", res.data)
-            let deta = res.data
-            // console.log(deta.data)
-            let resume = JSON.parse(deta.data)
-            // console.log(resume)
-            let mydetails = resume
-            // console.log(mydetails)
-            $('#obj').html(mydetails.Objectives)
-            $('#na').html(mydetails.Name)
+            console.log("res", res.data.data)
+            mydetails1 = JSON.parse(res.data.data)
+            console.log(mydetails1)
+            // console.log(mydetails1.resume_details)
+            mydetails = mydetails1.resume_details
+            $('#obj').html(mydetails.objectives)
+            $('#na').html(mydetails.name)
             $('#em').html(mydetails.email)
-            $("#con").html(mydetails.Contact)
-            $("#dec").html(mydetails.Declaration)
-            // console.log(mydetails.pers)
+            $("#con").html(mydetails.contact)
+            $("#dec").html(mydetails.declaration)
             let pesrsonal = mydetails.pers
-            // console.log(pesrsonal)
-            $("#f_name").html(pesrsonal.Father_name)
-            $("#m_name").html(pesrsonal.Mother_name)
+            $("#f_name").html(pesrsonal.father_name)
+            $("#m_name").html(pesrsonal.mother_name)
             $("#b_date").html(pesrsonal.date_of_birth)
             $("#mat").html(pesrsonal.status)
-            $("#nat").html(pesrsonal.Nationality)
+            $("#nat").html(pesrsonal.nationality)
             $("#reg").html(pesrsonal.religion)
-            $("#ci").html(pesrsonal.City)
+            $("#ci").html(pesrsonal.city)
             $("#pin").html(pesrsonal.pincode)
-            $("#add").html(pesrsonal.Presitent_address)
-            let education = mydetails.Qualification
-            // console.log(education)
+            $("#add").html(pesrsonal.presitent_address)
+          
+            console.log("hi",mydetails.skills)
+            let education=mydetails.Qualification
             let tabledata = ""
             for (i = 0; i < education.length; i++) {
 
                 tabledata = tabledata + `<tr>
-            <td>${education[i].institute_name}</td>
-            <td>${education[i].Level}</td>
-            <td>${education[i].precentage}</td>
-            <td>${education[i].passing_year}</td>
-            </tr>`
+                    <td>${education[i].institute_name}</td>
+                    <td>${education[i].Level}</td>
+                    <td>${education[i].precentage}</td>
+                    <td>${education[i].passing_year}</td>
+                    </tr>`
             }
             $("#q").html(tabledata)
-            let skill = mydetails.skills
-            // console.log(skill)
+            console.log(tabledata)
+            
+            let skill=mydetails.skills
             let skil = ""
             for (i = 0; i < skill.length; i++) {
                 skil = skil + `<li>${skill[i]}</li>`
             }
             $("#sk").html(skil)
             let language = mydetails.Language_knowns
-            // console.log(language)
+            console.log(language)
             let lang = ""
             for (i = 0; i < language.length; i++) {
                 lang = lang + `<li>${language[i]}</li>`
@@ -240,7 +240,7 @@ function show() {
             }
         }
     )
-    $("#tbody").html(tabledata)
+
 }
 function download() {
     alert('ok')

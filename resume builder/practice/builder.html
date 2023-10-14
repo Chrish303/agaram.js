@@ -4,7 +4,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-<div class="container" style="background-color: rgb(159, 247, 87);">
+<div class="container" style="background-color: rgb(154, 235, 138);">
 <h1>RESUME BUILDER</h1>
 <div>
   <form>
@@ -29,60 +29,60 @@
     <div class="col-sm-10">
       <input type="number" class="form-control" name="contact" placeholder="enter your mobile_no" onkeyup="parsedata(this)">
     </div>
- <div class="container" id="header">
-<h2>Personal details</h2>
+ <div class="container">
+<h2  id="line">Personal details</h2>
 </div>
  <div class="mb-3 row">
     <label class="col-sm-2 col-form-label">Father_name:</label>
-    <div class="col-sm-10">
+    <div class="col-sm-6">
       <input type="text" class="form-control" name="father_name" placeholder="enter your Father_name" onkeyup="parsedata(this,'pers')">
     </div>
   </div>
             <div class="mb-3 row">
     <label class="col-sm-2 col-form-label">Mother_name:</label>
-    <div class="col-sm-10">
+    <div class="col-sm-6">
       <input type="text" class="form-control" name="mother_name" placeholder="enter your name" onkeyup="parsedata(this,'pers')">
     </div>
   </div>
   <div class="mb-3 row">
     <label class="col-sm-2 col-form-label">Region:</label>
-    <div class="col-sm-10">
+    <div class="col-sm-6">
       <input type="text" class="form-control" name="religion" placeholder="enter religion" onkeyup="parsedata(this,'pers')">
     </div>
   </div>
   <div class="mb-3 row">
     <label class="col-sm-2 col-form-label">Nationality:</label>
-    <div class="col-sm-10">
+    <div class="col-sm-6">
       <input type="text" class="form-control" name="nationality" placeholder="enter your Nationality" onkeyup="parsedata(this,'pers')">
     </div>
   </div>
             <div class="mb-3 row">
     <label class="col-sm-2 col-form-label">date_of_birth:</label>
-    <div class="col-sm-10">
+    <div class="col-sm-6">
       <input type="date" class="form-control" name="date_of_birth" placeholder="enter your birth" onkeyup="parsedata(this,'pers')">
     </div>
  </div>
  <div class="mb-3 row">
  <label class="col-sm-2 col-form-label">Address:</label>
- <div class="col-sm-10">
+ <div class="col-sm-6">
  <input type="text" class="form-control" name="presitent_address" placeholder="enter your Address" onkeyup="parsedata(this,'pers')">
     </div>
   </div>
             <div class="mb-3 row">
     <label class="col-sm-2 col-form-label">City:</label>
-    <div class="col-sm-10">
+    <div class="col-sm-6">
       <input type="text" class="form-control" name="city" placeholder="enter your city" onkeyup="parsedata(this,'pers')">
     </div>
   </div>
   <div class="mb-3 row">
     <label class="col-sm-2 col-form-label">Status:</label>
-    <div class="col-sm-10">
+    <div class="col-sm-6">
     <input type="text" class="form-control" name="status" placeholder="enter your Status" onkeyup="parsedata(this,'pers')">
        </div>
      </div>
             <div class="mb-3 row">
     <label class="col-sm-2 col-form-label">Pincode:</label>
-    <div class="col-sm-10">
+    <div class="col-sm-6">
       <input type="number" class="form-control" name="pincode" placeholder="enter your pincode" onkeyup="parsedata(this,'pers')">
     </div>
   </div>
@@ -127,34 +127,35 @@
  </div>
 </div>
  <div class="col-auto">
- <button type="button" class="btn btn-primary mb-3"  onclick="finish('Qualification')">Add</button>
+ <button type="button" class="btn btn-primary mb-4"  onclick="finish('Qualification')">Add</button>
  </div>
- <table style="border: 1px solid black;">
+ <table style="border: 2px solid black;">
   <thead>
     <tr>
-      <td>ins_name</td>
-      <td>level</td>
-      <td>pre</td>
-      <td>year</td>
-      <td>Action</td>
+      <td >ins_name</td>
+      <td >level</td>
+      <td >pre</td>
+      <td >year</td>
+      <td >Action</td>
     </tr>
   </thead>
   <tbody  id="Qualification">
 
   </tbody>
  </table>
- <!-- <div class="container">
+ <div class="container">
   <h2>Projects  Details:</h2>
   </div>
  <div class="col-auto">
   <input type="text" class="form-control" id="project" name="project_nmae" placeholder="enter your projectt" onkeyup="edu(this)">
   </div>
   <div class="col-auto">
-    <input type="text" class="form-control" id="tittle" name="tittle" placeholder="enter your tittle" onkeyup="edu(this)">
+    <input type="text" class="form-control" id="details" name="details" placeholder="enter your tittle" onkeyup="edu(this)">
     </div>
+    
     <div class="col-auto">
       <button type="button" class="btn btn-primary mb-3"  onclick="finish('Qualification')">Add</button>
-      </div> -->
+      </div>
  <div class="mb-3">
   <label  class="form-label">Declaration:</label>
   <textarea name="declaration" class="form-control"rows="5" onkeyup="parsedata(this)"></textarea>
@@ -164,9 +165,10 @@
 <div class="alert alert-info" role="alert">
  <code><pre id="show" ></code></pre>
 </div>
-<div><button type="button" class="btn btn-primary" onclick="create()">Submit</button>
-    <button type="button" class="btn btn-success" onclick="get()">See My Resume</button>
-    <button type="button" class="btn btn-info" onclick="table()">List My Resume</button>
+<div class="d-grid gap-2 ">
+<button type="button" class="btn btn-warning" onclick="create()">Submit</button>
+    <!-- <button type="button" class="btn btn-info" onclick="get()">See My Resume</button> -->
+    <!-- <button type="button" class="btn btn-success" onclick="table()">List My Resume</button> -->
 </div>
 
    </body>

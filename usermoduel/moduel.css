@@ -1,0 +1,18 @@
+#register{
+    border: 1px solid black;
+    width: 53%;
+    /* display: none; */
+    margin-left: 24%;
+    margin-top: 8%;
+    padding: 20px 10px;
+   background-image: url("/home/christu-rajan/Downloads/mgm6vwQ.jpg");
+}
+#login{
+    border: 1px solid black;
+    width: 40%;
+    /* display: none; */
+    margin-left: 24%;
+    margin-top: 8%;
+    padding: 60px 10px;
+    background-image: url("");
+}

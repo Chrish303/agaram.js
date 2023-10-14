@@ -25,7 +25,7 @@ function skil(value, id, list) {
     document.getElementById(id).value = ""
     let details = "";
     for (i = 0; i < resume_details[value].length; i++) {
-        details = details + `<div id="create" ><h5>${resume_details[value][i]}</h5> <button type="button" class="btn btn-primary" onclick="del('${[i]}','${[value]}')" >delete <span class="badge text-bg-secondary"></span> </button></div>`
+        details = details + `<div id="create" ><h5>${resume_details[value][i]}</h5> <button type="button" class="btn btn-outline-danger" onclick="del('${[i]}','${[value]}')" >delete <span class="badge text-bg-secondary"></span> </button></div>`
     }
     document.getElementById(list).innerHTML = details
     display()
@@ -63,7 +63,7 @@ function dis(tata, data) {
         for (const key in tata[i]) {
             tddata = tddata + `<td>${tata[i][key]}</td>`
         }
-        tdd = tdd + `<tr>` + tddata + `<td> <button type="button"  onclick="rem('${i}','${data}')">&times;</button></td>` + `</tr>`
+        tdd = tdd + `<tr>` + tddata + `<td> <button type="button" class="btn btn-outline-danger"  onclick="rem('${i}','${data}')">delete</button></td>` + `</tr>`
     }
     document.getElementById(data).innerHTML = tdd
 }

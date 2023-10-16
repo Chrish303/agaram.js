@@ -1,18 +1,32 @@
+#body{
+    background-image: url("/home/christu-rajan/Downloads/photo-1553095066-5014bc7b7f2d.jpeg");
+}
+#regbody{
+    background-image: url("/home/christu-rajan/Downloads/abstract-magic-light-background-blue-holiday-vector-8147237.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#tab{
+    border: 2px solid black;
+   font-style: italic;
+}
 #register{
-    border: 1px solid black;
-    width: 53%;
+    /* border: 1px solid black;     */
+    width: 43%;
     /* display: none; */
-    margin-left: 24%;
-    margin-top: 8%;
-    padding: 20px 10px;
-   background-image: url("/home/christu-rajan/Downloads/mgm6vwQ.jpg");
+    margin-left: 30%;
+    margin-top: 1%;
+    padding: 31px 0px;
+   /* background-image: url("/home/christu-rajan/Downloads/mgm6vwQ.jpg"); */
 }
 #login{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 40%;
     /* display: none; */
-    margin-left: 24%;
+    margin-left: 20%;
     margin-top: 8%;
-    padding: 60px 10px;
+    padding: 80px 10px;
     background-image: url("");
+    /* background-image: url("/home/christu-rajan/Downloads/photo-1553095066-5014bc7b7f2d.jpeg"); */
 }

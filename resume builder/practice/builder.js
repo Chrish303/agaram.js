@@ -63,7 +63,7 @@ function dis(tata, data) {
         for (const key in tata[i]) {
             tddata = tddata + `<td>${tata[i][key]}</td>`
         }
-        tdd = tdd + `<tr>` + tddata + `<td> <button type="button" class="btn btn-outline-danger"  onclick="rem('${i}','${data}')">delete</button></td>` + `</tr>`
+        tdd = tdd + `<tr >` + tddata + `<td class="table-secondary"> <button type="button" class="btn btn-outline-danger"  onclick="rem('${i}','${data}')">delete</button></td>` + `</tr>`
     }
     document.getElementById(data).innerHTML = tdd
 }
@@ -176,9 +176,8 @@ function showresue(id) {
             $("#ci").html(pesrsonal.city)
             $("#pin").html(pesrsonal.pincode)
             $("#add").html(pesrsonal.presitent_address)
-          
-            console.log("hi",mydetails.skills)
-            let education=mydetails.Qualification
+            console.log("hi", mydetails.skills)
+            let education = mydetails.Qualification
             let tabledata = ""
             for (i = 0; i < education.length; i++) {
 
@@ -191,8 +190,8 @@ function showresue(id) {
             }
             $("#q").html(tabledata)
             console.log(tabledata)
-            
-            let skill=mydetails.skills
+
+            let skill = mydetails.skills
             let skil = ""
             for (i = 0; i < skill.length; i++) {
                 skil = skil + `<li>${skill[i]}</li>`
@@ -240,7 +239,6 @@ function show() {
             }
         }
     )
-
 }
 function download() {
     alert('ok')

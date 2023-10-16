@@ -75,7 +75,15 @@ function list(){
             console.log(tab[1].id)
             let tabledata=""
         for(i=0;i<tab.length;i++){
-                tabledata=tabledata+`<tr><td>${tab[i].id}</td><td>${tab[i].name}</td><td>${tab[i].email}</td><td>${tab[i].phone}</td><td>${tab[i].area}</td><td>${tab[i].address}</td><td>${tab[i].pin}</td></tr>`
+                tabledata=tabledata+`<tr><td>${tab[i].id}</td>
+                <td class="table-secondary">${tab[i].name}</td>
+                <td class="table-success">${tab[i].email}</td>
+                <td class="table-danger">${tab[i].address}</td>
+                <td class="table-warning">${tab[i].area}</td>
+                <td class="table-primary">${tab[i].phone}</td>
+                <td class="table-info">${tab[i].aadhar}</td>
+                <td class="table-danger">${tab[i].aadhar}</td>
+                <td class="table-warning">${tab[i].pin}</td></tr>`
             }
             $("#tbody").html(tabledata)
             // for(i=0;i<tab.length)

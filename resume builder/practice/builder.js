@@ -255,14 +255,14 @@ function showresue(id) {
             let skill = mydetails.skills
             let skil = ""
             for (i = 0; i < skill.length; i++) {
-                skil = skil + `<li>${skill[i]}</li>`
+                skil = skil + `<li class="list-group-item">${skill[i]}</li>`
             }
             $("#sk").html(skil)
             let language = mydetails.Language_knowns
             console.log(language)
             let lang = ""
             for (i = 0; i < language.length; i++) {
-                lang = lang + `<li>${language[i]}</li>`
+                lang = lang + `<li class="list-group-item">${language[i]}</li>`
             }
             $("#lan").html(lang)
         },

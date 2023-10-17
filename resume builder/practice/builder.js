@@ -1,5 +1,6 @@
 let resume_details = {}
 let education_temp = {}
+let project_details={}
 function parsedata(a, b) {
     if (b) {
         if (resume_details) {
@@ -42,6 +43,9 @@ function edu(status) {
     education_temp[status.name] = status.value
     // console.log(education_temp)
 }
+function exp(rol) {
+    project_details[rol.name] = rol.value
+}
 function finish(data) {
     if (!resume_details[data]) {
         resume_details[data] = []
@@ -63,7 +67,10 @@ function dis(tata, data) {
         for (const key in tata[i]) {
             tddata = tddata + `<td>${tata[i][key]}</td>`
         }
-        tdd = tdd + `<tr >` + tddata + `<td class="table-secondary"> <button type="button" class="btn btn-outline-danger"  onclick="rem('${i}','${data}')">delete</button></td>` + `</tr>`
+        tdd = tdd + `<tr >` + tddata + `
+        <td class="table-secondary">
+         <button type="button" class="btn btn-outline-danger"  onclick="rem('${i}','${data}')">
+         delete</button></td>` + `</tr>`
     }
     document.getElementById(data).innerHTML = tdd
 }
@@ -79,6 +86,49 @@ function rem(ki, ko) {
     dis(resume_details[ko], ko)
     display()
 }
+function project(end) {
+    if (!resume_details[end]) {
+        resume_details[end] = []
+    }
+    resume_details[end].push(project_details)
+    dis(resume_details[end], end)
+    project_details = {}
+    let keys = Object.keys(project_details)
+    for (i = 0; i < keys.length; i++) {
+        let van = keys[i]
+        document.getElementById(van).value = ""
+    }
+    display()
+}
+
+function dis(jet, end) {
+    let pro_d = ""
+    for (i = 0; i < jet.length; i++) {
+        let pr_data = ""
+        for (const key in jet[i]) {
+            pr_data = pr_data + `<td>${jet[i][key]}</td>`
+        }
+        pro_d = pro_d + `<tr >` + pr_data + `
+        <td class="table-secondary">
+         <button type="button" class="btn btn-outline-danger"  onclick="trash('${i}','${end}')">
+         delete</button></td>` + `</tr>`
+    }
+    document.getElementById(end).innerHTML = pro_d
+    display()
+}
+function trash(ne, old) {
+    let kili = resume_details[old]
+    let n_data = []
+    for (i = 0; i < kili.length; i++) {
+        if (i != ne) {
+            n_data.push(kili[i])
+        }
+    }
+    resume_details[old] = n_data
+    dis(resume_details[old], old)
+    display()
+}
+
 function display() {
     document.getElementById("show").innerHTML = JSON.stringify(resume_details, undefined, 2)
 }
@@ -189,8 +239,19 @@ function showresue(id) {
                     </tr>`
             }
             $("#q").html(tabledata)
-            console.log(tabledata)
+            // console.log(tabledata)
+            let projects = mydetails.Project_Details
+            let tdata = ""
+            for (i = 0; i < projects.length; i++) {
 
+                tdata = tdata + `<tr>
+                    <td>${projects[i].comapny_name}</td>
+                    <td>${projects[i].roll}</td>
+                    <td>${projects[i].experience}</td>
+                    </tr>`
+            }
+            $("#r").html(tdata)
+            // console.log(tdata)
             let skill = mydetails.skills
             let skil = ""
             for (i = 0; i < skill.length; i++) {

@@ -154,9 +154,9 @@
             <div class="col-auto">
               <button type="button" class="btn btn-primary mb-4" onclick="finish('Qualification')">Add</button>
             </div>
-            <table class="table table-striped-columns">
+            <table class="table">
               <thead>
-                <tr>
+                <tr class="table table-dark table-striped">
                   <td>ins_name</td>
                   <td>level</td>
                   <td>pre</td>
@@ -174,27 +174,28 @@
             </div>
             <div class="col-auto">
               <input type="text" class="form-control" id="comapny_name" name="comapny_name"
-                placeholder="enter your company name" onkeyup="edu(this)">
+                placeholder="enter your company name" onkeyup="exp(this)">
             </div>
             <div class="col-auto">
-              <input type="text" class="form-control" id="roll" name="roll" placeholder="roll " onkeyup="edu(this)">
+              <input type="text" class="form-control" id="roll" name="roll" placeholder="roll " onkeyup="exp(this)">
             </div>
             <div class="col-auto">
               <input type="text" class="form-control" id="experience" name="experience" placeholder="experience "
-                onkeyup="edu(this)">
+                onkeyup="exp(this)">
             </div>
             <div class="col-auto">
-              <button type="button" class="btn btn-primary mb-3" onclick="finish('Qualification')">Add</button>
+              <button type="button" class="btn btn-primary mb-3" onclick="project('Project_Details')">Add</button>
             </div>
-            <table class="table table-striped-columns">
-              <thead>
-                <tr>
-                  <td>comapny_name</td>
+            <table class="table ">
+              <thead >
+                <tr class="table table-dark table-striped" >
+                  <td >comapny_name</td>
                   <td>roll</td> 
-                  <td>experience</td>                   
+                  <td>experience</td> 
+                  <td>Action</td>                  
                 </tr>
               </thead>
-              <tbody id="Qualification">
+              <tbody id="Project_Details">
 
               </tbody>
             </table>

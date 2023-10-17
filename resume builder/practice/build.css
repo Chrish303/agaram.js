@@ -4,13 +4,13 @@
 }
 #head{
     border: 1px solid black;
-    background-color: yellowgreen;
+    background-color: rgb(158, 158, 161);
 }
 #about{
     display: inline-block;
     border: 1px solid black;
     width: 30%;
-    background-color: aqua;
+    background-color: aliceblue;
 }
 #title{
     display: inline-block;
@@ -20,12 +20,8 @@
     background-color: aliceblue;
     padding-top: 18;
 }
-#table{
-    border: 1px solid black;
-    align-items: center;
-}
-#body{
-    background-color: rgb(97, 214, 208);
+a{
+    font-style: italic;
 }
 #data{
     background-color: green;

@@ -1,6 +1,6 @@
 let resume_details = {}
 let education_temp = {}
-let project_details={}
+let project_details = {}
 function parsedata(a, b) {
     if (b) {
         if (resume_details) {
@@ -318,6 +318,7 @@ function download() {
     // Choose the element that our invoice is rendered in.
     html2pdf().set(opt).from(page).save();
 }
+
 
 
 // var getUrlParameter = function getUrlParameter(sParam) {

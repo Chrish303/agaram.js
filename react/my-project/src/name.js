@@ -1,14 +1,15 @@
 import { Button,  Table, InputGroup } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import Second from './form'
 import Homed from './home'
 import axios from 'axios'
 
 
+
 export default function Namelist(props) {
 
-
+ 
 
     let [names, setnames] = useState(["sobith", "Sheik", "Ajay", "Ajil", "Barish", "Vikash", "Chrish"])
 
@@ -21,6 +22,24 @@ export default function Namelist(props) {
         alert(Rname)
     }
 
+
+function Getdata(){
+        axios({
+            method: 'post',
+            url: 'http://agaram.academy/api/action.php',
+           data: {
+                request : "candidate_login",
+                email : "chrish@gmail.com",
+                password : 12345
+            },
+            
+          }).then(function(response){
+            console.log(response.data)
+          })
+} 
+
+
+
 function Apidata(){
     axios({
         method: 'get',
@@ -30,6 +49,10 @@ function Apidata(){
         console.log(response.data)
       })
 }
+
+useEffect(()=>{
+    Apidata();
+    },[])  
     return (
         <>
         <Homed />
@@ -44,16 +67,19 @@ function Apidata(){
                 {names.map((n, index) => (
                     <tr>
                         <td>{index + 1}</td>
-                        <td>{n}</td>
+                        <td> {n}</td>
                         <td> <Button variant="info" onClick={() => Editname(n)}>rename</Button></td>
                         <td> <Button variant="danger" onClick={() => deletename(n)}>Remove</Button></td>
                     </tr>
                 ))}
             </Table>
             <Button variant="info" onClick={()=>Apidata()}>Get data</Button>
+            <Button variant="info" onClick={()=>Getdata()}> data</Button>
             <Second setnames={setnames} names={names} /> 
             {props.Islogged.status?"Wellcome too ":"Guest user"}
             {props.Islogged.username}
+         
+
  </>
  )
 }

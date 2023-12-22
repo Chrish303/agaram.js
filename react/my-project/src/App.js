@@ -2,14 +2,16 @@ import logo from './logo.svg';
 import './App.css';
 import {Button,Alert,Table} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 import Header from './Head.js'
 import Homed from './home.js'
 import Names from './name.js'
 import In from './form.js'
 import Login from './login.js'
 import {createBrowserRouter,RouterProvider} from "react-router-dom";
-
+import Store from './Store.js'
+import { Provider } from 'react-redux'
+import Signin from './Sign.js'
 
 
 
@@ -37,13 +39,22 @@ const router = createBrowserRouter([
     path: "/change",
     element: <In />
   },
- 
+  {
+    path: "/sign",
+    element: <Signin />
+  },
 ]);
+
   return (
+    
+    <Provider store={Store}>
+ 
     <div className='container'>
     
       <RouterProvider router={router} />                                                                                                                                                                                                                                 
     </div>
+    </Provider>
+    
   )
   
   // (

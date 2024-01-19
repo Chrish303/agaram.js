@@ -1,0 +1,28 @@
+
+body{
+    background-color: aqua;
+}
+div{
+    background-color: rgb(228, 194, 194);
+}
+.first{
+    padding: 30px ;
+    /* border: 1px solid black; */
+    height: 20px;
+    position: relative;
+}
+.second{
+    position: absolute;
+    top: 6%;
+    right: 30%;
+    /* padding: 30px ;
+    border: 1px solid black;
+    margin-top: 5px;
+    text-align: center; */
+}
+.animate {
+    width: 80px;
+    height: 80px;
+    background: steelblue;
+    animation: sizingAnimation 3s infinite;
+  }

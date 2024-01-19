@@ -1,0 +1,20 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+     <h1>Name Lists</h1>
+        <form action='/' method="POST">
+            <lable>Names :</lable>
+            <input type="text" name="Stu_name"></input>
+            <input type="submit" value="Add"/>
+        </form>
+
+        <ul>
+            {% for i in range(names|length) %}
+            <li>{{names[i]}} &nbsp; &nbsp; &nbsp;<a href="/delete/{{names[i]}}">Delete</a>&nbsp; &nbsp; &nbsp;<a href='/update/{{i}}'>Update</a></li>
+            {% endfor %}
+           </ul>
+
+    </body>
+</html>

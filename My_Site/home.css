@@ -570,4 +570,76 @@ ul li a:hover{
     margin-left: 20px;
     font-size: 16px;
   }
+  /* contact */
+  .contact{
+    position: relative;
+  }
+  .cards {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .cards .red {
+    position: absolute;
+    top: 220px;
+    right: 0;
+    background-color: #dad1d3;
+  }
+  
+  .cards .blue {
+    position: absolute;
+    top: 350px;
+    right: 0;
+    background-color: #dad1d3;
+  }
+  
+  .cards .green {
+    background-color: #dad1d3;
+  }
+  .cards .yellow {
+    position: absolute;
+    top: 480px;
+    right: 0;
+    background-color: #dad1d3;
+  }
+  
+  .cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100px;
+    width: 500px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 400ms;
+  }
+  
+  .cards .card p.tip {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #000;
+    
+  }
+  
+  .cards .card p.second-text {
+    font-size: .8em;
+    color: #000;
+  }
+  
+  .cards .card:hover {
+    transform: scale(1.1, 1.1);
+  }
+  
+  .cards:hover > .card:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+  }
+  
+ 
+      
   

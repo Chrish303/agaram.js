@@ -1,8 +1,9 @@
 // import { useState } from "react";
-// import Login from './login'
+import Login from './login'
 import { useNavigate } from "react-router";
 import { useSelector,useDispatch } from "react-redux";
 import { RegisterDetails } from "../reducer/slice"
+import Button from '../button';
 
 function Reg(){
 
@@ -15,13 +16,25 @@ function Reg(){
 
     const handlechange=(e)=>{
         dispatch(RegisterDetails({...IsRegister,[e.target.name]:e.target.value}))
+        console.log(IsRegister)
     }
+    
 
-    console.log(IsRegister)
+const Register=(e)=>{
+    e.preventDefault()
+    if(IsRegister.password==IsRegister.confirmpassword){
+        Navigate('/Login')
+    }
+     else{
+        alert("password Didn't match")
+    }
+}
+
     return(
         <>
+     
         <h1>Wellcome to CHRISH</h1>
-        <form>free fire chrisrthu rajan
+        <form onSubmit={Register}> free fire chrisrthu rajan
             <label>Name :</label>
             <input type="name" placeholder="enter your name" required="" name="name" onChange={handlechange}/><br></br>
             <lable>Email</lable>
@@ -40,7 +53,8 @@ function Reg(){
             <input type="text" placeholder="enter your District" required="" name="district" onChange={handlechange}/><br></br>
             <label>State :</label>
             <input type="text" placeholder="enter your State" required="" name="state" onChange={handlechange}/><br></br>
-            <button type="button" onClick={()=>Navigate('/Login')}>Register</button> 
+            <Button type="submit" name="register"/>
+            <p>Already have an account ?<a href="login">login</a></p>
         </form>
        
         </>

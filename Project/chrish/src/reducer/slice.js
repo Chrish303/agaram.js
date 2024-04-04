@@ -14,13 +14,19 @@ export const userSlice = createSlice({
             state: "",
             pincode: ""
         },
+        Logindata:{
+        
+        },
     },
     reducers: {
         RegisterDetails: (state, action) => {
             state.Registerdata = action.payload;
-        }
+        },
+        LoginDetails:(state,action)=>{
+            state.Logindata=action.payload;
+        },
     }
 });
 
-export const { RegisterDetails } = userSlice.actions;
+export const { RegisterDetails,LoginDetails } = userSlice.actions;
 export default userSlice.reducer;

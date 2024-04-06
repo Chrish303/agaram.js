@@ -2,10 +2,16 @@ import { useNavigate } from "react-router";
 import { useSelector,useDispatch } from "react-redux";
 import { LoginDetails } from "../reducer/slice";
 import Home from './home'
+import Lable from "./lable";
 import Input from "../input";
 import Button from "../button";
+import *as Yup from 'yup'
+import '../App.css'
+import { useState } from "react";
  
 function Log(){
+
+    const [error,seterror]=useState({});
 
     let Navigate=useNavigate();
 
@@ -18,8 +24,19 @@ function Log(){
     console.log(Islogin)
     }
 
-    const Login=(e)=>{
+    const Login=async(e)=>{
         e.preventDefault()
+        try {
+        await  Validation.validate(Islogin,{abortEarly:false})
+        } 
+        catch (error) {
+            // console.log(error.inner)
+            const newerror={}
+            error.inner.map((eacherror)=>{
+                newerror[eacherror.path]=eacherror.message
+                seterror(newerror)
+            })
+        }
         if(Islogin.email!==""&&Islogin.password!==""){
             Navigate('/Home')
         }
@@ -28,19 +45,23 @@ function Log(){
         }
     }
 
+    const Validation=Yup.object().shape({
+        email:Yup.string().required("email is required"),
+        password:Yup.string().required("password is required"),
+    })
+
     return(
         <>
         <h1>Wellcome to login page</h1>
         <form onSubmit={Login}>
-            {/* <lable>Email :</lable>
-            <input type="email" required="" placeholder="enter your email" name="email" onChange={handlechange}></input><br></br>
-            <lable>Password :</lable>
-            <input type="password" required="" placeholder="enter your email" name="password" onChange={handlechange}></input><br></br>
-            <button type="submit" >Login</button> */}
-            <Input type="email" placeholder="email" name="email" handlechange={handlechange}/>
-            <Input type="password" required="" placeholder="enter your password" name="password" handlechange={handlechange}/>
-            <p>Do you have an account ?<a href="/">register</a></p>
+            <Lable name="Email"/>
+            <Input type="email" placeholder="email" name="email" handlechange={handlechange}/><br></br>
+            {error.email && <div className="error">{error.email}</div>}
+            <Lable name="Password"/>
+            <Input type="password" required="" placeholder="enter your password" name="password" handlechange={handlechange}/><br></br>
+            {error.password && <div className="error">{error.password}</div>}
             <Button type="submit" name="login"/>
+            <p>Do you have an account ?<a href="/">register</a></p>
         </form>
         </>
     )

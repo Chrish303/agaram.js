@@ -15,7 +15,8 @@ export const userSlice = createSlice({
             pincode: ""
         },
         Logindata:{
-        
+            email:"",
+            password:""
         },
     },
     reducers: {

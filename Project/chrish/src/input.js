@@ -1,4 +1,8 @@
-export default function Input(props){
-    return(
-    <input name={props.name} placeholder={props.placeholder} type={props.type} onChange={props.handlechange}/>
-)}
+
+function Input(props){
+    return (
+        <input type={props.type} placeholder={props.placeholder} name={props.name} onChange={props.handlechange} />
+    );
+};
+
+export default Input;
